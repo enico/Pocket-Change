@@ -7,12 +7,39 @@
 //
 
 #import "AppDelegate.h"
+#import <RevMobAds/RevMobAds.h>
+#import "iRateViewController.h"
+#import "iRate.h"
 
 @implementation AppDelegate
 
++ (void)initialize
+{
+    //set the bundle ID. normally you wouldn't need to do this
+    //as it is picked up automatically from your Info.plist file
+    //but we want to test with an app that's actually on the store
+    [iRate sharedInstance].applicationBundleID = @"com.appinnovative.PocketChange";
+	[iRate sharedInstance].onlyPromptIfLatestVersion = NO;
+    
+    //set events count (default is 10)
+    [iRate sharedInstance].eventsUntilPrompt = 3;
+    
+    //disable minimum day limit and reminder periods
+    [iRate sharedInstance].daysUntilPrompt = 0;
+    [iRate sharedInstance].remindPeriod = 2;
+}
+- (void)iRateUserDidRequestReminderToRateApp
+{
+    //reset event count after every 5 (for demo purposes)
+    [iRate sharedInstance].eventCount = 5;
+}
+
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    //adding a custom image to the navigation bar
+    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"header.png"] forBarMetrics:UIBarMetricsDefault];
+     [RevMobAds startSessionWithAppID:@"5341d7c61e69f10113d24f9e"];
     return YES;
 }
 							
@@ -34,7 +61,11 @@
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
+
 {
+   // [RevMobAds session].testingMode = RevMobAdsTestingModeWithAds;
+   
+    
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
 }
 
