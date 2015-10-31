@@ -3,7 +3,7 @@
 //  PocketChange
 //
 //  Created by Erica Nico on 3/30/14.
-//  Copyright (c) 2014 Appinnovative. All rights reserved.
+//  Copyright (c) 2014 Erica Roy. All rights reserved.
 //
 
 #import "AppDelegate.h"
@@ -18,7 +18,7 @@
     //set the bundle ID. normally you wouldn't need to do this
     //as it is picked up automatically from your Info.plist file
     //but we want to test with an app that's actually on the store
-    [iRate sharedInstance].applicationBundleID = @"com.appinnovative.PocketChange";
+    [iRate sharedInstance].applicationBundleID = @"";
 	[iRate sharedInstance].onlyPromptIfLatestVersion = NO;
     
     //set events count (default is 10)
@@ -39,7 +39,7 @@
 {
     //adding a custom image to the navigation bar
     [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"header.png"] forBarMetrics:UIBarMetricsDefault];
-     [RevMobAds startSessionWithAppID:@"5341d7c61e69f10113d24f9e"];
+     [RevMobAds startSessionWithAppID:@""];
     return YES;
 }
 							

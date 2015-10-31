@@ -276,7 +276,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0510;
-				ORGANIZATIONNAME = Appinnovative;
+				ORGANIZATIONNAME = "Erica Roy";
 				TargetAttributes = {
 					7E3D856918E8EF3400F05C0E = {
 						DevelopmentTeam = G4TUEEJMQJ;
@@ -489,6 +489,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PocketChange/PocketChange-Prefix.pch";
 				INFOPLIST_FILE = "PocketChange/PocketChange-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
@@ -510,6 +511,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PocketChange/PocketChange-Prefix.pch";
 				INFOPLIST_FILE = "PocketChange/PocketChange-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;

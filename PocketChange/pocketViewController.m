@@ -3,7 +3,7 @@
 //  PocketChange
 //
 //  Created by Erica Nico on 4/1/14.
-//  Copyright (c) 2014 Appinnovative. All rights reserved.
+//  Copyright (c) 2014 Erica Roy. All rights reserved.
 //
 
 #import "pocketViewController.h"
@@ -149,7 +149,7 @@
 
 - (IBAction)infoButton:(id)sender {
     
-    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Help" message:@"Thank you for trying Pocket Coins. Pocket Coins is a simple app to be used to quickly determine a price to sell your stock. Pocket Coins takes your ideal rate of return and calculates a suggested sale point. COST Basis-Enter the total cost paid for your stock, which should include commission, QUANTITY-Enter the total quantity of stock. RETRUN Percent-Enter the return percentage you would like to see from selling your stock. Once you have the sell point, remember to set an alert on your trading platform. PPS-This estimates the amount you paid per share with commission. For Help contact Appinnovative, support@appinnovative.com" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Help" message:@"" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
     [alert show];
 }
 
